@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "DontSurf",
+  "version": "0.0.1",
+  "description": "A Chrome extension that recommends books based on websites visited",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 

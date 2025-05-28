@@ -1,0 +1,1 @@
+function s(){const t=document.title,e=window.location.href,n=document.body.innerText.split(/\s+/).filter(o=>o.length>4).slice(0,10);return{title:t,url:e,keywords:n}}chrome.runtime.sendMessage({type:"PAGE_ANALYZED",data:s()});
